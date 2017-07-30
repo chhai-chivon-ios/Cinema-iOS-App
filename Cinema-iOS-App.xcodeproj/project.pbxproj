@@ -15,6 +15,8 @@
 		1BA287341F2E84700020B53B /* Cinema_iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA287331F2E84700020B53B /* Cinema_iOS_AppTests.swift */; };
 		1BA2873F1F2E84710020B53B /* Cinema_iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2873E1F2E84710020B53B /* Cinema_iOS_AppUITests.swift */; };
 		1BA287511F2E8B830020B53B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA287501F2E8B830020B53B /* Movie.swift */; };
+		1BA287531F2E978A0020B53B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA287521F2E978A0020B53B /* HomeViewController.swift */; };
+		1BA287551F2E97AF0020B53B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA287541F2E97AE0020B53B /* ApiService.swift */; };
 		9601599EC5B24B782EFF1759 /* Pods_Cinema_iOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307FA6B0823D845F518D2161 /* Pods_Cinema_iOS_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,8 @@
 		1BA2873E1F2E84710020B53B /* Cinema_iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cinema_iOS_AppUITests.swift; sourceTree = "<group>"; };
 		1BA287401F2E84710020B53B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BA287501F2E8B830020B53B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		1BA287521F2E978A0020B53B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		1BA287541F2E97AE0020B53B /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		307FA6B0823D845F518D2161 /* Pods_Cinema_iOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cinema_iOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		912889144AC9A356473ED054 /* Pods-Cinema-iOS-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinema-iOS-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cinema-iOS-App/Pods-Cinema-iOS-App.debug.xcconfig"; sourceTree = "<group>"; };
 		F2F98EC460FBD517E0523A40 /* Pods-Cinema-iOS-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cinema-iOS-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cinema-iOS-App/Pods-Cinema-iOS-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,12 +110,11 @@
 		1BA2871D1F2E846F0020B53B /* Cinema-iOS-App */ = {
 			isa = PBXGroup;
 			children = (
+				1BA287561F2E97CA0020B53B /* Application */,
 				1BA2874F1F2E85870020B53B /* Service */,
 				1BA2874E1F2E85750020B53B /* Controller */,
 				1BA2874D1F2E856D0020B53B /* Model */,
 				1BA2874C1F2E85590020B53B /* View */,
-				1BA2871E1F2E846F0020B53B /* AppDelegate.swift */,
-				1BA287201F2E846F0020B53B /* ViewController.swift */,
 				1BA287251F2E84700020B53B /* Assets.xcassets */,
 				1BA2872A1F2E84700020B53B /* Info.plist */,
 			);
@@ -156,6 +159,8 @@
 		1BA2874E1F2E85750020B53B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1BA287201F2E846F0020B53B /* ViewController.swift */,
+				1BA287521F2E978A0020B53B /* HomeViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -163,8 +168,17 @@
 		1BA2874F1F2E85870020B53B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				1BA287541F2E97AE0020B53B /* ApiService.swift */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		1BA287561F2E97CA0020B53B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1BA2871E1F2E846F0020B53B /* AppDelegate.swift */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		AAB32447F32D88F0A525BCC7 /* Pods */ = {
@@ -370,8 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA287211F2E846F0020B53B /* ViewController.swift in Sources */,
+				1BA287551F2E97AF0020B53B /* ApiService.swift in Sources */,
 				1BA2871F1F2E846F0020B53B /* AppDelegate.swift in Sources */,
 				1BA287511F2E8B830020B53B /* Movie.swift in Sources */,
+				1BA287531F2E978A0020B53B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
